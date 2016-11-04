@@ -1,0 +1,231 @@
+/**
+ * Page content
+ */
+@media print {
+  .page-content {
+    margin-top: 0px !important;
+  }
+
+  .print-only {
+    line-height: 1em;
+    font-size: 50px;
+    display: inherit !important;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+.page-content {
+  margin-top: $header-height;
+  padding: $spacing-unit 0;
+  background: white;
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
+.post-link {
+  display: block;
+  font-size: 24px;
+}
+
+
+
+/**
+ * Posts
+
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+  font-size: 42px;
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($content-laptop) {
+    font-size: 36px;
+  }
+}
+
+.post-content {
+  margin-bottom: $spacing-unit;
+
+  h2 {
+    font-size: 32px;
+
+    @include media-query($content-laptop) {
+      font-size: 28px;
+    }
+  }
+
+  h3 {
+    font-size: 26px;
+
+    @include media-query($content-laptop) {
+      font-size: 22px;
+    }
+  }
+
+  h4 {
+    font-size: 20px;
+
+    @include media-query($content-laptop) {
+      font-size: 18px;
+    }
+  }
+}
+
+*/
+
+/**
+ * Post Lists
+ */
+.post-list li {
+  display: inline-block;
+  border-bottom: solid 1px lightgray;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  line-height: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.post-list li a {
+  display: inline-block;
+  font-size: $h3;
+  float: left;
+}
+
+.post-list li img {
+  display: inline-block;
+}
+
+#featured-image {
+  float: right;
+}
+
+/**
+ * Home Layout
+ */
+.home {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: $page-color;
+  margin: 5px;
+  text-align: center;
+
+  color: white;
+  font-size: $h4;
+  vertical-align: center;
+  max-height: 200px;
+  line-height: 200px;
+
+  overflow: hidden;
+
+  text-decoration: none !important;
+
+  &,
+  &:visited,
+  &:hover {
+    text-decoration: none !important;
+    color: white;
+  }
+
+}
+
+#card-0 {
+}
+
+#card-1 {
+}
+
+#card-2 {
+}
+
+#card-3 {
+}
+
+/*
+ * Post Table
+ */
+.post-content table {
+  margin-bottom: 20px;
+  border: 1px solid black;
+  padding: 0;
+  background: black;
+}
+
+th {
+  background: whitesmoke;
+  padding: 15px;
+}
+
+td {
+  background: white;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*
+ * Home Jumbotron
+ */
+
+.jumbotron {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0px !important;
+}
+
+.jumbotron img {
+  object-fit: cover;
+  width: 100%;
+  height: $jumbotron-height;
+}
+
+.home-page-content {
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+
+.jumbotron-title {
+  position: absolute;
+  width: 100vw;
+  height: $jumbotron-height;
+  line-height: $jumbotron-height;
+  text-align: center;
+  color: black;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: whitesmoke;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: $menu-bar-color !important;
+}
+.slick-prev { left: 10px !important; z-index: 1; }
+.slick-next { right: 10px !important; }
+.slick-dots { bottom: 10px !important; }

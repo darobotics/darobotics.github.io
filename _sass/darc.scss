@@ -1,0 +1,64 @@
+// Define defaults for each variable.
+
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #111 !default;
+$background-color: #fdfdfd !default;
+$brand-color:      #2a7ae2 !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+// Width of the content area
+$content-width:    960px !default;
+
+$content-mobile:   600px !default;
+$content-laptop:   960px !default;
+
+// Content
+$header-image: url(../assets/images/header.jpg) no-repeat center center !default;
+$jumbotron-height: 100vh !default;
+$header-height: 70vh !default;
+$header-height-absolute: 90vh !default;
+
+$page-color: #F2F2F2 !default;
+$menu-text-color: white !default;
+$menu-bar-color: #333333 !default;
+
+
+$h1: 72px !default;
+$h2: 56px !default;
+$h3: 46px !default;
+$h4: 26px !default;
+$h5: 18px !default;
+$h6: 16px !default;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Import partials.
+@import
+  "darc/reset",
+  "darc/layout",
+  "darc/header",
+  "darc/footer"
+;

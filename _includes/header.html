@@ -1,0 +1,70 @@
+<header class="site-header" role="banner">
+
+  <div class="menu no-print">
+    <div class="wrapper">
+
+      {% assign custom_url = site.url | append: site.baseurl %}
+      {% assign full_base_url = custom_url | default: site.github.url %}
+      <a class="site-title" href="{{ full_base_url }}/">{{ site.title | escape }}</a>
+
+      <nav class="site-nav">
+
+        <div class="trigger">
+          {% for post in site.posts %}
+            {% if post.pin-menu == true %}
+              <a class="page-link" href="{{ post.url | prepend: full_base_url }}">{{ post.title | escape }}</a>
+            {% endif %}
+          {% endfor %}
+
+          {% for my_page in site.pages %}
+            {% if my_page.title and my_page.pin-menu == true %}
+              <a class="page-link" href="{{ my_page.url | prepend: full_base_url }}">{{ my_page.title | escape }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </nav>
+
+    </div>
+  </div>
+
+  {% if page.path != "index.html" %}
+  <div class="background">
+    <h1 class="title no-print">
+      {{ page.title }}
+    </h1>
+    {% if page.image %}
+      <img id="parallax-header" class="no-print" src="{{ page.image | prepend: full_base_url }}">
+    {% else %}
+      <img id="parallax-header" class="no-print" src="{{ "/assets/images/header.jpg" | prepend: full_base_url }}">
+    {% endif %}
+  </div>
+  {% else %}
+  <div class="jumbotron slick">
+    {% if page.image0 %}
+    <div><a href="{{ page.url0 | prepend: full_base_url }}"><h1 class="jumbotron-title">{{ page.title0 }}</h1><img src="{{ page.image0 | prepend: full_base_url }}"></a></div>
+    {% endif %}
+
+    {% if page.image1 %}
+    <div><a href="{{ page.url1 | prepend: full_base_url }}"><h1 class="jumbotron-title">{{ page.title1 }}</h1><img src="{{ page.image1 | prepend: full_base_url }}"></a></div>
+    {% endif %}
+
+    {% if page.image2 %}
+    <div><a href="{{ page.url2 | prepend: full_base_url }}"><h1 class="jumbotron-title">{{ page.title2 }}</h1><img src="{{ page.image2 | prepend: full_base_url }}"></a></div>
+    {% endif %}
+
+    {% if page.image3 %}
+    <div><a href="{{ page.url3 | prepend: full_base_url }}"><h1 class="jumbotron-title">{{ page.title3 }}</h1><img src="{{ page.image3 | prepend: full_base_url }}"></a></div>
+    {% endif %}
+
+    {% if page.image4 %}
+    <div><a href="{{ page.url4 | prepend: full_base_url }}"><h1 class="jumbotron-title">{{ page.title4 }}</h1><img src="{{ page.image4 | prepend: full_base_url }}"></a></div>
+    {% endif %}
+
+    {% if page.image5 %}
+    <div><a href="{{ page.url5 | prepend: full_base_url }}"><h1 class="jumbotron-title">{{ page.title5 }}</h1><img src="{{ page.image5 | prepend: full_base_url }}"></a></div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+</header>
+
